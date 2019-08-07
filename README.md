@@ -5,7 +5,7 @@ Basically it performs ```docker system prune --all``` from time to time.
 
 ## Usage
 * To run it on a standalone host
-  * ```docker run -v /var/run/docker.sock:/var/run/docker.sock getsoma/docker-janitor```
+  * ```docker run -v /var/run/docker.sock:/var/run/docker.sock getsoma/janitor```
 * To run on all hosts of a Swarm Cluster
   * docker-compose.yml
 
@@ -14,7 +14,7 @@ version: '3.5'
 
 services:
   janitor:
-    image: getsoma/docker-janitor
+    image: getsoma/janitor
     build: .
     deploy:
       mode: global
