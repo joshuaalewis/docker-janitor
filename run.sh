@@ -9,6 +9,8 @@ fi
 
 while [ : ]
 do
+    echo "$(date) Calling 'docker rm $(docker ps -a -q)'..."
+    docker rm $(docker ps -a -q)
     echo "$(date) Calling 'docker rmi $(docker images -a -q)'..."
     docker rmi $(docker images -a -q)
     echo "$(date) Done"
